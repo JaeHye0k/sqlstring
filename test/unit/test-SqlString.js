@@ -4,7 +4,7 @@ var test      = require('utest');
 var vm        = require('vm');
 
 test('SqlString.escapeId', {
-  'function string is not wrapped by backtiack': function() {
+  'function string is not wrapped in backtick': function() {
     assert.equal(SqlString.escapeId('COUNT(id)'), 'COUNT(id)');
   },
   'value is quoted': function() {
@@ -53,7 +53,7 @@ test('SqlString.escapeId', {
 });
 
 test('SqlString.escape', {
-  'function string is not wrapped by backtiack': function() {
+  'function string is not wrapped in backtick': function() {
     assert.equal(SqlString.escape('COUNT(id)'), 'COUNT(id)');
   },
   'undefined -> NULL': function() {
